@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ToDo List </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body onload="startTime()">
+  <div class="container-fluid contenedor-datos">
+    <div class="list roundBorder campo-texto">
+      <div class="date">
+        <div class="dateRight">
+          <div id="dateNumber"></div>
+          <div>
+            <div id="dateMonth"></div>
+            <div id="dateYear"></div>
+          </div>
+        </div>
+        <div class="date-left">
+          <div id="dateText"></div>
+          <div id="clockdate">
+            <div class="clockdate-wrapper">
+              <div id="clock"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <iframe src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5COO9vTaRpO" width="100%" height="80"
+        frameBorder="0" allowtransparency="true" allow="encrypted-media" class="spoty"></iframe>
+      <a class="weatherwidget-io clima" href="https://forecast7.com/es/n41d13n71d31/san-carlos-de-bariloche/"
+        data-label_1="BARILOCHE" data-icons="Climacons" data-mode="Current" data-days="3" data-theme="original"
+        data-basecolor="#608cca10">BARILOCHE</a>
+      <div class="contenedor-form">
+        <h4 class="titulo-tarea">Agregar tarea</h4>
+        <form onsubmit="addNewTask(event)" class="formulario">
+          <input type="text" name="taskText" autocomplete="off" placeholder="Nueva tarea" class="roundBorder textarea ">
+          <button type="submit" class="addTaskButton button btnmas">+</button>
+          <button type="button" class="orderButton roundBorder button " onclick="renderOrderedTasks()">Ordenar</button>
+        </form>
+      </div>
+      <div id="tasksContainer" class="lista">
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <!--#contenido-->
+
+  <script src="assets/js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+  <script>
+    !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = 'https://weatherwidget.io/js/widget.min.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'weatherwidget-io-js');
+  </script>>
+</body>
+
+</html>
